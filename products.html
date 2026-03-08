@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HARMONY — Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="HARMONY logo" />
+                    <div class="name">
+                        <strong>HARMONY</strong>
+                        <span>Mind-Control Prosthetics</span>
+                    </div>
+                </a>
+
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                    <a href="about.html">About Us</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </nav>
+
+                <a class="btn primary" href="order.html">Order Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <p class="kicker">Products</p>
+                <h1 class="hero-title">The HARMONY <span class="accent">Package</span></h1>
+                <p class="hero-sub">
+                    One integrated system: neural headset + artificial arm + mobile app (calibration & training).
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="h2">What’s included</h2>
+            <p class="lead">
+                The HARMONY package includes all components as one ecosystem. Each part has a clear role and works together seamlessly.
+            </p>
+
+            <div class="grid-3">
+                <article class="card product">
+                    <img src="1.png" alt="HARMONY Headset" />
+                    <h3>Neural Headset</h3>
+                    <p>
+                        Captures brain-signal patterns and filters noise to produce stable intent commands. This is the starting point of reliable control.
+                    </p>
+                    <div class="price-row">
+                        <span class="price">Included</span>
+                        <span class="badge">Package</span>
+                    </div>
+                </article>
+
+                <article class="card product">
+                    <img src="2.png" alt="HARMONY Prosthetic Arm" />
+                    <h3>Artificial Arm</h3>
+                    <p>
+                        Converts commands into smooth movement with controlled limits for safety and repeatability. Designed for daily, real-world usage.
+                    </p>
+                    <div class="price-row">
+                        <span class="price">Included</span>
+                        <span class="badge">Package</span>
+                    </div>
+                </article>
+
+                <article class="card product">
+                    <img src="3.png" alt="HARMONY Mobile App" />
+                    <h3>Mobile App</h3>
+                    <p>
+                        Guides calibration and training, stores user profiles, and improves accuracy over time. Also provides status and personalization settings.
+                    </p>
+                    <div class="price-row">
+                        <span class="price">Included</span>
+                        <span class="badge">Package</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- TOTAL PACKAGE PRICE -->
+            <div style="height:18px"></div>
+
+            <div class="card" style="padding:18px;">
+                <p class="kicker" style="margin-bottom:6px;">Pricing</p>
+                <h2 class="h2" style="margin-bottom:8px;">Total Package Price</h2>
+                <p class="lead" style="margin-bottom:14px;">
+                    The price includes the headset, artificial arm, and mobile app as one integrated system.
+                </p>
+
+                <div style="
+          display:flex; align-items:center; justify-content:space-between; gap:12px;
+          border-top:1px solid rgba(51,51,51,.6); padding-top:14px;">
+                    <div style="font-family:var(--font-display); font-size:22px;">
+                        <span class="accent">$4299</span> <span style="color:rgba(255,255,255,.7); font-size:14px;">(total)</span>
+                    </div>
+                    <a class="btn primary" href="order.html">Order the Package</a>
+                </div>
+            </div>
+
+            <!-- APP DOWNLOAD BOX (REDESIGNED) -->
+            <div style="height:18px"></div>
+
+            <div class="card gate">
+                <p class="kicker">Mobile App</p>
+                <h3>Download the Mobile App</h3>
+                <p class="lead" style="margin-bottom:10px;">
+                    Enter your device serial number to unlock downloads. Example: <b>HARMONY-12AB-9ZK3</b>
+                </p>
+
+                <div class="gate-grid">
+                    <input class="input" id="serialInput" placeholder="Serial number (HARMONY-XXXX-XXXX)" />
+                    <div class="gate-actions">
+                        <button class="btn primary" id="serialCheckBtn" type="button">Verify</button>
+                        <a class="btn" href="order.html">Order page</a>
+                    </div>
+                </div>
+
+                <div id="serialMsg" class="serial-msg"></div>
+
+                <div class="download-grid">
+                    <div class="download-card">
+                        <strong>Android</strong>
+                        <span>APK download for Android devices.</span>
+                        <a class="btn primary" aria-disabled="true" data-download href="app-android.apk">Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <strong>iOS</strong>
+                        <span>Install link for iPhone / iPad.</span>
+                        <a class="btn primary" aria-disabled="true" data-download href="app-ios-link.txt">Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <strong>Desktop</strong>
+                        <span>Desktop version for clinics & training.</span>
+                        <a class="btn" aria-disabled="true" data-download href="app-windows.exe">Download</a>
+                    </div>
+                </div>
+
+                <p class="serial-msg" style="margin-top:12px;">
+                    Note: This is client-side verification. For strong protection, connect serial verification to a backend database.
+                </p>
+            </div>
+
+            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="order.html">Order with sizes</a>
+                <a class="btn" href="help-contact.html">Support</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner" style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+                <div>© <span id="year"></span> HARMONY.</div>
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="index.html">Home</a>
+                    <a href="order.html">Order</a>
+                    <a href="about.html">About</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

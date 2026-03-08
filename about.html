@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HARMONY — About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="HARMONY logo" />
+                    <div class="name">
+                        <strong>HARMONY</strong>
+                        <span>Mind-Control Prosthetics</span>
+                    </div>
+                </a>
+
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                    <a href="about.html">About Us</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </nav>
+
+                <a class="btn primary" href="order.html">Order</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <p class="kicker">About</p>
+                <h1 class="hero-title">Meet the <span class="accent">HARMONY</span> team</h1>
+                <p class="hero-sub">
+                    Built by specialists in DevOps, AI, embedded systems, and full-stack engineering.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="h2">Leadership & Core Team</h2>
+            <p class="lead">Clear responsibilities across architecture, AI models, deployment, and product delivery.</p>
+
+            <div class="team">
+                <article class="card member">
+                    <img src="ezzat-tarek.png" alt="Ezzat Tarek" />
+                    <h3>Ezzat Tarek</h3>
+                    <p class="role">CEO • DevOps Engineer</p>
+                    <p>
+                        Leads system architecture and integration. Contributes across embedded systems and DevOps, ensuring stable deployment workflows and reliable end-to-end operation.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="amir-kasseb.png" alt="Amir Kasseb" />
+                    <h3>Amir Kasseb</h3>
+                    <p class="role">AI Engineer</p>
+                    <p>
+                        Built the MI (Motor Imagery) model. Focuses on signal processing and training to improve accuracy, stability, and real-time response.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="omar-abdelsalam.png" alt="Omar Abdelsalam" />
+                    <h3>Omar Abdelsalam</h3>
+                    <p class="role">AI Engineer</p>
+                    <p>
+                        Built the SSVEP model for intent detection using visual stimuli. Works on robustness, classification performance, and low-latency inference.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="abdelrahman-ayman.png" alt="Abdelrahman Ayman" />
+                    <h3>Abdelrahman Ayman</h3>
+                    <p class="role">DevOps Engineer</p>
+                    <p>
+                        Helps build and maintain application infrastructure, CI/CD, and operational readiness to support reliable releases.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="abdelrahman-shebl.png" alt="Abdelrahman Shebl" />
+                    <h3>Abdelrahman Shebl</h3>
+                    <p class="role">DevOps Engineer</p>
+                    <p>
+                        Contributed to deploying the website and ensuring availability and deployment automation for web delivery.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="youssef-allam.png" alt="Youssef Allam" />
+                    <h3>Youssef Allam</h3>
+                    <p class="role">Full-Stack Engineer</p>
+                    <p>
+                        Built website UI and responsive structure, preparing it for future backend integration and production use.
+                    </p>
+                </article>
+
+                <article class="card member">
+                    <img src="qasem.png" alt="Qasem" />
+                    <h3>Qasem</h3>
+                    <p class="role">Mobile Application Engineer</p>
+                    <p>
+                        Built the mobile app calibration and training flows, focusing on usability and reliable integration with the headset and arm.
+                    </p>
+                </article>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <h2 class="h2">Company Advisor</h2>
+            <p class="lead">Guidance supporting quality, validation, and product direction.</p>
+
+            <div class="team">
+                <article class="card member">
+                    <img src="dr-hania.png" alt="Dr. Hania" />
+                    <h3>Dr. Hania</h3>
+                    <p class="role">Company Advisor</p>
+                    <p>
+                        Advises on product direction and real-world readiness, helping ensure professional standards, validation planning, and strong product quality.
+                    </p>
+                </article>
+            </div>
+
+            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="order.html">Order</a>
+                <a class="btn" href="help-contact.html">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>© <span id="year"></span> HARMONY.</div>
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

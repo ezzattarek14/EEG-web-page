@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HARMONY — Order</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="HARMONY logo" />
+                    <div class="name">
+                        <strong>HARMONY</strong>
+                        <span>Mind-Control Prosthetics</span>
+                    </div>
+                </a>
+
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                    <a href="about.html">About Us</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </nav>
+
+                <a class="btn primary" href="help-contact.html">Need Help?</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <p class="kicker">Order</p>
+                <h1 class="hero-title">Choose the right <span class="accent">sizes</span> & side</h1>
+                <p class="hero-sub">
+                    This page collects sizing options to reduce mistakes. After submission, it opens your email app to send the order request.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="card order">
+                    <h3>Order Form</h3>
+                    <p class="lead" style="margin-bottom:14px;">
+                        Fill your details, then select head size, arm size, hand size, and whether the arm is right or left.
+                    </p>
+
+                    <form id="orderForm">
+                        <div class="field">
+                            <div class="label">Full name</div>
+                            <input class="input" id="o_name" required placeholder="Your full name" />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Email</div>
+                            <input class="input" id="o_email" type="email" required placeholder="you@email.com" />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Phone</div>
+                            <input class="input" id="o_phone" required placeholder="+20 ..." />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Address</div>
+                            <input class="input" id="o_address" required placeholder="City, Street, Building..." />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Head size</div>
+                            <select class="input" id="head_size" required>
+                <option value="">Select…</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Arm size</div>
+                            <select class="input" id="arm_size" required>
+                <option value="">Select…</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Hand size</div>
+                            <select class="input" id="hand_size" required>
+                <option value="">Select…</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Arm side</div>
+                            <select class="input" id="arm_side" required>
+                <option value="">Select…</option>
+                <option>Right</option>
+                <option>Left</option>
+              </select>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Serial number (optional)</div>
+                            <input class="input" id="o_serial" placeholder="If you already have a device serial" />
+                        </div>
+
+                        <button class="btn primary" type="submit">Submit Order Request</button>
+                        <p id="orderNote" class="note"></p>
+                    </form>
+                </div>
+
+                <div class="card order">
+                    <h3>How to choose sizes</h3>
+                    <p class="lead" style="margin-bottom:12px;">
+                        This section explains what the size fields mean so the customer selects correctly.
+                    </p>
+
+                    <div class="total-box">
+                        <b>Head size:</b> headset fit and comfort. Choose based on head circumference.<br><br>
+                        <b>Arm size:</b> prosthetic structure length and socket compatibility. Choose based on your measurements or clinician guidance.<br><br>
+                        <b>Hand size:</b> grip geometry and comfort. Choose based on palm width and finger length preference.<br><br>
+                        <b>Arm side:</b> select <b>Right</b> or <b>Left</b> depending on which arm is needed.
+                    </div>
+
+                    <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+                        <a class="btn" href="products.html">View products</a>
+                        <a class="btn primary" href="help-contact.html">Contact support</a>
+                    </div>
+
+                    <p class="note" style="margin-top:12px;">
+                        Pricing reference: each component is shown on the products page as <b>$4299</b>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>© <span id="year"></span> HARMONY.</div>
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,573 @@
+:root {
+    --primary: #0ED285;
+    --primary-dark: #116F4A;
+    --bg: #000000;
+    --surface: #1A1A1A;
+    --surface-2: #222222;
+    --border: #333333;
+    --text: #FFFFFF;
+    --muted: #999999;
+    --radius: 26px;
+    --pad: 25px;
+    --max: 1180px;
+    --shadow: 0 15px 45px rgba(0, 0, 0, .55);
+    --glow: 0 0 0 6px rgba(14, 210, 133, .12), 0 20px 55px rgba(14, 210, 133, .08);
+    --font-body: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --font-display: "Fredoka", "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: radial-gradient(1000px 600px at 15% 0%, rgba(14, 210, 133, .08), transparent 55%), radial-gradient(900px 500px at 85% 15%, rgba(14, 210, 133, .06), transparent 55%), var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+}
+
+.section {
+    padding: 80px 0
+}
+
+
+/* ===== Typography helpers ===== */
+
+.kicker {
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .55);
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.h2 {
+    font-family: var(--font-display);
+    font-size: 30px;
+    margin: 0 0 12px;
+    line-height: 1.15;
+    letter-spacing: -.2px;
+}
+
+.lead {
+    margin: 0 0 26px;
+    color: rgba(255, 255, 255, .75);
+    max-width: 78ch;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.accent {
+    color: var(--primary)
+}
+
+
+/* ================= NAV ================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, .55);
+    border-bottom: 1px solid rgba(51, 51, 51, .7);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.brand strong {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: .4px;
+}
+
+.brand span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    transition: .25s ease;
+}
+
+.links a:hover {
+    background: rgba(255, 255, 255, .05)
+}
+
+.links a.active {
+    border-color: rgba(14, 210, 133, .4);
+    background: rgba(14, 210, 133, .1);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .04);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px)
+}
+
+.btn.primary {
+    border-color: rgba(14, 210, 133, .55);
+    background: linear-gradient(180deg, rgba(14, 210, 133, .25), rgba(14, 210, 133, .12));
+    box-shadow: var(--glow);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    padding: 70px 0 30px
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+
+/* Banner Image */
+
+.hero-media {
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(51, 51, 51, .8);
+    box-shadow: var(--shadow);
+}
+
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Hero Text */
+
+.hero-card {
+    padding: 28px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(51, 51, 51, .8);
+    background: linear-gradient(180deg, rgba(14, 210, 133, .08), rgba(255, 255, 255, .02));
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 44px;
+    margin: 10px 0 14px;
+    line-height: 1.1;
+}
+
+.hero-sub {
+    color: rgba(255, 255, 255, .75);
+    font-size: 15px;
+}
+
+
+/* ================= CARDS ================= */
+
+.card {
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+
+/* grids */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* Feature cards (home page) */
+
+.feature {
+    padding: 22px;
+}
+
+.feature h3 {
+    margin: 6px 0 10px;
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .72);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.icon-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 210, 133, .35);
+    background: rgba(14, 210, 133, .10);
+    font-weight: 800;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .92);
+    margin-bottom: 10px;
+}
+
+.icon-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 18px rgba(14, 210, 133, .55);
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.product {
+    padding: 20px;
+}
+
+.product img {
+    height: 200px;
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid rgba(51, 51, 51, .7);
+}
+
+.product h3 {
+    font-family: var(--font-display);
+    margin: 14px 0 6px;
+}
+
+.product p {
+    margin: 0;
+    color: rgba(255, 255, 255, .72);
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(51, 51, 51, .6);
+}
+
+.price {
+    font-weight: 800
+}
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 210, 133, .45);
+    background: rgba(14, 210, 133, .08);
+}
+
+
+/* ================= SERIAL INPUT ================= */
+
+.input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: rgba(0, 0, 0, .35);
+    color: white;
+}
+
+.input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 5px rgba(14, 210, 133, .15);
+    outline: none;
+}
+
+
+/* ===== App Download Box (Products) ===== */
+
+.gate {
+    padding: 22px;
+}
+
+.gate h3 {
+    font-family: var(--font-display);
+    margin: 0 0 10px;
+}
+
+.gate-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.gate-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.serial-msg {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .65);
+}
+
+.download-grid {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.download-card {
+    padding: 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(51, 51, 51, .7);
+    background: rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 92px;
+}
+
+.download-card strong {
+    font-size: 13px;
+}
+
+.download-card span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .65);
+    line-height: 1.5;
+}
+
+.download-card a {
+    margin-top: auto;
+}
+
+.download-card a[aria-disabled="true"] {
+    opacity: .45;
+    pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+    .gate-grid {
+        grid-template-columns: 1fr;
+    }
+    .gate-actions {
+        justify-content: flex-start;
+    }
+    .download-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= ORDER ================= */
+
+.order {
+    padding: 22px
+}
+
+.field {
+    margin-bottom: 14px
+}
+
+.label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 5px;
+}
+
+select.input {
+    appearance: none;
+}
+
+.total-box {
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(51, 51, 51, .7);
+    background: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .78);
+    line-height: 1.7;
+}
+
+
+/* ================= TEAM ================= */
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.member {
+    padding: 18px
+}
+
+.member img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid rgba(51, 51, 51, .7);
+}
+
+.member h3 {
+    font-family: var(--font-display);
+    margin: 12px 0 6px;
+}
+
+.role {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* ================= FAQ ================= */
+
+.faq {
+    padding: 20px
+}
+
+.faq details {
+    margin-bottom: 12px;
+    border-radius: 18px;
+    padding: 12px 16px;
+    border: 1px solid rgba(51, 51, 51, .6);
+    background: rgba(0, 0, 0, .25);
+}
+
+.faq summary {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    border-top: 1px solid rgba(51, 51, 51, .6);
+    font-size: 13px;
+    color: rgba(255, 255, 255, .6);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+    .grid-3 {
+        grid-template-columns: 1fr
+    }
+    .grid-2 {
+        grid-template-columns: 1fr
+    }
+    .team {
+        grid-template-columns: 1fr
+    }
+    .hero-title {
+        font-size: 34px
+    }
+    .hero-media {
+        height: 220px
+    }
+    .h2 {
+        font-size: 26px
+    }
+}

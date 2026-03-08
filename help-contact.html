@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HARMONY — Help & Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="HARMONY logo" />
+                    <div class="name">
+                        <strong>HARMONY</strong>
+                        <span>Mind-Control Prosthetics</span>
+                    </div>
+                </a>
+
+                <nav class="links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                    <a href="about.html">About Us</a>
+                    <a href="help-contact.html">Help & Contact</a>
+                </nav>
+
+                <a class="btn primary" href="order.html">Order</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero-card">
+                <p class="kicker">Help</p>
+                <h1 class="hero-title">Support & <span class="accent">Contact</span></h1>
+                <p class="hero-sub">
+                    The form opens your email app to message <span class="accent" style="font-weight:800;">ezzattarek14@gmail.com</span>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="card faq">
+                    <h2 class="h2">FAQ</h2>
+                    <p class="lead" style="margin-bottom:16px;">Common questions from users, partners, and clinics.</p>
+
+                    <details>
+                        <summary>How does the system work?</summary>
+                        <p>
+                            The headset captures signal patterns, the AI model interprets intent, and the arm executes movement. The mobile app calibrates and improves control over time.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>How do I choose sizes for ordering?</summary>
+                        <p>
+                            Use the Order page to select head size, arm size, hand size, and arm side (right/left). For best accuracy, follow clinician measurements.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>How do I download the app?</summary>
+                        <p>
+                            On the Products page, enter your device serial number to unlock download links.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Partnership or clinic demo?</summary>
+                        <p>
+                            Send a message with your organization name, country, and intended use case. We will reply with next steps.
+                        </p>
+                    </details>
+                </div>
+
+                <div class="card" style="padding:18px;">
+                    <h2 class="h2">Contact Form</h2>
+                    <p class="lead" style="margin-bottom:16px;">
+                        Fill this form — it opens your email client with a ready-to-send message.
+                    </p>
+
+                    <form id="contactForm">
+                        <div class="field">
+                            <div class="label">Full name</div>
+                            <input class="input" id="name" placeholder="Your name" required />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Email</div>
+                            <input class="input" id="email" type="email" placeholder="you@email.com" required />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Subject</div>
+                            <input class="input" id="subject" placeholder="Demo / Partnership / Support..." />
+                        </div>
+
+                        <div class="field">
+                            <div class="label">Message</div>
+                            <textarea class="input" id="message" placeholder="Write your message..." required></textarea>
+                        </div>
+
+                        <button class="btn primary" type="submit">Send Email</button>
+                        <p id="formNote" class="note"></p>
+                    </form>
+
+                    <div style="margin-top:14px; border-top:1px solid rgba(51,51,51,.7); padding-top:14px;">
+                        <p style="margin:0; color:rgba(255,255,255,.72); font-size:13px;">
+                            Direct email: <span class="accent" style="font-weight:800;">ezzattarek14@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+                <a class="btn primary" href="order.html">Order</a>
+                <a class="btn" href="products.html">Products</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>© <span id="year"></span> HARMONY.</div>
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
